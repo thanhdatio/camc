@@ -1686,7 +1686,7 @@ input, select, textarea {
 		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-		background-color: #43B3E0;
+		background-color: #4e4a4a;
 		padding: 1em 2.35em 1em 2.35em;
 		font-size: 1.1em;
 		max-width: 24em;
@@ -2443,3 +2443,64 @@ input, select, textarea {
 					}
 
 	}
+
+	.lan-main{
+		margin-top: 10px;
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		justify-content: center;
+	}
+	.lan-main__1 {
+		border: .5px #8a8a8a solid;
+		padding: 3px 5px 3px 5px;
+		border-radius: 10px;
+		transition: background-position 2s ease;
+		background-color: inherit
+
+	}
+	.lan-main__1:hover{
+		color: rgb(136, 136, 136);
+		cursor: pointer;
+		animation: Shake 1s linear forwards;
+		
+	}
+	
+	@keyframes Shake {
+		0% {
+			background-color: #8a8a8a;
+		  transform: rotate(0deg) scale(0.9);
+		}
+		10% {
+		  transform: rotate(4deg) scale(0.92);
+		}
+		20% {
+		  transform: rotate(8deg) scale(0.94);
+		}
+		30% {
+		  transform: rotate(12deg) scale(0.96);
+		}
+		40% {
+		  transform: rotate(12deg) scale(0.98);
+		}
+		50% {
+		  transform: rotate(8deg) scale(1);
+		}
+		60% {
+		  transform: rotate(4deg) scale(1);
+		}
+		70% {
+		  transform: rotate(0deg) scale(0.98);
+		}
+		80% {
+		  transform: rotate(-4deg) scale(0.96);
+		}
+		90% {
+		  transform: rotate(-8deg) scale(0.94);
+		}
+		100% {
+			background-color: #4e4a4a;
+		  transform: rotate(-4deg) scale(0.92);
+		}
+	  }
+	
