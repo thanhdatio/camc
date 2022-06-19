@@ -32,8 +32,11 @@
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
-								<h1>Hi, I'm <strong>Dhirendra Thakulla</strong>.</h1> 
-
+								<!-- <h1>Hi, I'm <strong class="letters">Dhirendra Thakulla</strong>.</h1>  -->
+								<h1>Hi, I'm</h1>
+								<h1 class="ml1">
+									  <span class="letters">Dhirendra Thakulla</span>
+								  </h1>
 							</header>
 							<p>I <strong>design</strong> and <strong>build</strong> websites and web applications that facilitate achieving client business goals. </p>
 							<a href="#work" class="button large scrolly">Learn about what I do</a>
@@ -215,6 +218,22 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+			<script>
+				var textWrapper = document.querySelector('.ml1 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.letter',
+    scale: [0.3,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 600,
+    delay: (el, i) => 70 * (i+1)
+  })
+			</script>
 
 	</body>
 </html>
