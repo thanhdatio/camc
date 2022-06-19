@@ -2450,6 +2450,8 @@ input, select, textarea {
 		flex-direction: row;
 		gap: 10px;
 		justify-content: center;
+		max-width: inherit;
+		flex-wrap: wrap;
 	}
 	.lan-main__1 {
 		border: .5px #8a8a8a solid;
