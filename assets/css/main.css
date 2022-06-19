@@ -2281,6 +2281,9 @@ input, select, textarea {
 			hr {
 				margin: 1.5em 0 2em 0;
 			}
+			.letter {
+				font-size: 30px;
+			}
 
 		/* Section/Article */
 
