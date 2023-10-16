@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="./assets/sass/libs/json-formatter.css">
 	</head>
 	<body class="is-preload">
 
@@ -24,7 +25,7 @@
 			</nav>
 
 		<!-- Home -->
-			<article id="top" class="wrapper style1">
+			<div id="top" class="wrapper style1">
 				<div class="container">
 					<div class="row">
 						<div class="col-4 col-5-large col-12-medium">
@@ -32,75 +33,32 @@
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
-								<!-- <h1>Hi, I'm <strong class="letters">Dhirendra Thakulla</strong>.</h1>  -->
-								<h1>Hi, I'm</h1>
+								<h1 class="greeting-warpper">
+									<strong class="greeting">Hi, I'm</strong>
+								</h1>
 								<h1 class="ml1">
 									  <strong class="letters">Dhirendra Thakulla</strong>
 								  </h1>
 							</header>
-							<p>I <strong>design</strong> and <strong>build</strong> websites and web applications that facilitate achieving client business goals. </p>
+						<div class="text-ani">
+							<p class="line-1 anim-typewriter">
+								I <strong>Design</strong> , <strong>Build</strong> web applications and more.
+							</p>
+						</div>
 							<a href="#work" class="button large scrolly">Learn about what I do</a>
 						</div>
 					</div>
 				</div>
-			</article>
+			</div>
 
 		<!-- Work -->
 			<article id="work" class="wrapper style2">
 				<div class="container col-8 col-7-large col-12-medium">
 					<header>
-						<h2>Here's all the languages and dev tools that I have used: </h2>
-						<div class="lan-main">
-							<span class="lan-main__1">
-								Angular
-							</span>
-							<span class="lan-main__1">
-								Vue
-							</span>
-							<span class="lan-main__1">
-								Node
-							</span>
-							<span class="lan-main__1">
-								javascript
-							</span>
-							<span class="lan-main__1">
-								jquery
-							</span>
-							<span class="lan-main__1">
-								php
-							</span>
-							<span class="lan-main__1">
-								mysql
-							</span>
-							<span class="lan-main__1">
-								mangodb
-							</span>
-							<span class="lan-main__1">
-								html5
-							</span>
-							<span class="lan-main__1">
-								sass
-							</span>
-							<span class="lan-main__1">
-								grpc
-							</span>
-						</div>
+						<h2>Tech stack </h2>
+						<div id="techDataContainer"></div>
+
 					</header>
-					<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-comments"></span>
-								<h3>Web application</h3>
-								<p></p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-camera-retro"></span>
-								<h3>Website</h3>
-							</section>
-						</div>
-					</div>
 					<footer>
 						<a href="#portfolio" class="button large scrolly">See some of my work</a>
 					</footer>
@@ -111,8 +69,8 @@
 			<article id="portfolio" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>Here’s some stuff I made/worked on.</h2>
-						<p style="color: rgb(181, 32, 32);">Note: below mentioned project belongs to company that I have worked with</p>
+						<h2>Here’s some stuff I made/worked on</h2>
+						<!-- <p style="color: rgb(181, 32, 32);">Note: below mentioned project belongs to company that I have worked with</p> -->
 					</header>
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
@@ -219,20 +177,88 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+			<script src="./assets/sass/libs/json-formatter.js"></script>
 			<script>
+				
 				var textWrapper = document.querySelector('.ml1 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+				var textGreetingWrapper = document.querySelector('.greeting-warpper .greeting');
+				var letters = $('.letters');
+				// letters.hide();
+				
+				textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+				textGreetingWrapper.innerHTML = textGreetingWrapper.textContent.replace(/\S/g, "<span class='greeting'>$&</span>");
+		anime.timeline({loop: false})
+		.add({
+			targets: '.greeting',
+			scale: [0,1],
+			opacity: [0,1],
+			translateZ: 0,
+			easing: "easeOutExpo",
+			duration: 900,
+			delay: (el, i) => 90 * (i+1)
+		})
+		function textAnimiName(){
+			anime.timeline({loop: false})
+		.add({
+			targets: '.letter',
+			scale: [0.3,1],
+			opacity: [.3,1],
+			translateX: 0,
+			translateZ: 0,
+			easing: "easeOutExpo",
+			duration: 600,
+			delay: (el, i) => 70 * (i+1)
+		})
+		}
 
-anime.timeline({loop: false})
-  .add({
-    targets: '.letter',
-    scale: [0.3,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 600,
-    delay: (el, i) => 70 * (i+1)
-  })
+		setTimeout(() => {textAnimiName()},1000)
+//
+		const techData = {
+            "languages": {
+                "Nodejs": "express",
+                "PHP": "cakePHP",
+                "Java": "core Java"
+            },
+            "frontend": ["Angular", "Vue", "React"],
+            "design": ["HTML5", "CSS", "SCSS", "Bootstrap", "Material design"],
+            "Database": ["MySQL", "MongoDb"],
+            "cache": "Redis",
+            "httpClient": ["Axios", "gRPC"],
+            "messageBroker": "RabbitMq"
+        };
+
+        // Function to display the JSON data
+        function displayTechData() {
+			var container = document.getElementById("techDataContainer");
+            var jsonData = JSON.stringify(techData, null, 2);
+			const config = {
+				hoverPreviewEnabled: true,
+				hoverPreviewArrayCount: 100,
+				hoverPreviewFieldCount: 5,
+				theme: '',
+				animateOpen: true,
+				animateClose: true,
+				useToJSON: true,
+				maxArrayItems: 100,
+				exposePath: false
+			}
+
+            var formatter = new JSONFormatter(JSON.parse(jsonData),2,[config]);
+            container.innerHTML = formatter;
+			console.log(formatter)
+            container.appendChild(formatter.render());
+
+        }
+ 
+		displayTechData();
+		var container = document.getElementById("techDataContainer");
+		if (container) {
+		// Check if the innerHTML of the container contains the "[object Object]" string
+		if (container.innerHTML.includes("[object Object]")) {
+			// Replace the "[object Object]" string with an empty string to remove it
+			container.innerHTML = container.innerHTML.replace("[object Object]", "");
+		}
+}
 			</script>
 
 	</body>
