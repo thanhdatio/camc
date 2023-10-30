@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="./assets/sass/libs/json-formatter.css">
 	</head>
 	<body class="is-preload">
 
@@ -22,9 +23,12 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
-
+			<a href="https://drive.google.com/file/d/1Cw1aaDmnjiBwvEpcLpjVG52HoUIG_f3Z/preview" target="_blank" class="float" id="cvBtn">
+			<i class="fa fa-download my-float">
+			</i>
+			</a>
 		<!-- Home -->
-			<article id="top" class="wrapper style1">
+			<div id="top" class="wrapper style1">
 				<div class="container">
 					<div class="row">
 						<div class="col-4 col-5-large col-12-medium">
@@ -32,75 +36,33 @@
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
-								<!-- <h1>Hi, I'm <strong class="letters">Dhirendra Thakulla</strong>.</h1>  -->
-								<h1>Hi, I'm</h1>
+								<h1 class="greeting-warpper">
+									<strong class="greeting">Hi, I'm</strong>
+								</h1>
 								<h1 class="ml1">
 									  <strong class="letters">Dhirendra Thakulla</strong>
 								  </h1>
 							</header>
-							<p>I <strong>design</strong> and <strong>build</strong> websites and web applications that facilitate achieving client business goals. </p>
-							<a href="#work" class="button large scrolly">Learn about what I do</a>
+						<div class="text-ani">
+							<p class="line-1 anim-typewriter">
+								I <strong>Design</strong> , <strong>Build</strong> web applications and more.
+							</p>
+							<p></p>
+						</div>
+							<a href="#tech" class="button large scrolly learn-more" id="learnBtn">Learn what I do</a>
 						</div>
 					</div>
 				</div>
-			</article>
+			</div>
 
 		<!-- Work -->
 			<article id="work" class="wrapper style2">
-				<div class="container col-8 col-7-large col-12-medium">
+				<div class="container col-8 col-7-large col-12-medium" id="tech">
 					<header>
-						<h2>Here's all the languages and dev tools that I have used: </h2>
-						<div class="lan-main">
-							<span class="lan-main__1">
-								Angular
-							</span>
-							<span class="lan-main__1">
-								Vue
-							</span>
-							<span class="lan-main__1">
-								Node
-							</span>
-							<span class="lan-main__1">
-								javascript
-							</span>
-							<span class="lan-main__1">
-								jquery
-							</span>
-							<span class="lan-main__1">
-								php
-							</span>
-							<span class="lan-main__1">
-								mysql
-							</span>
-							<span class="lan-main__1">
-								mangodb
-							</span>
-							<span class="lan-main__1">
-								html5
-							</span>
-							<span class="lan-main__1">
-								sass
-							</span>
-							<span class="lan-main__1">
-								grpc
-							</span>
-						</div>
+						<h2>Tech stack </h2>
+						<div id="techDataContainer"></div>
+
 					</header>
-					<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-comments"></span>
-								<h3>Web application</h3>
-								<p></p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-camera-retro"></span>
-								<h3>Website</h3>
-							</section>
-						</div>
-					</div>
 					<footer>
 						<a href="#portfolio" class="button large scrolly">See some of my work</a>
 					</footer>
@@ -108,78 +70,91 @@
 			</article>
 
 		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
-				<div class="container">
+			<article  class="wrapper style3">
+				<div class="container" id="portfolio">
 					<header>
-						<h2>Here’s some stuff I made/worked on.</h2>
-						<p style="color: rgb(181, 32, 32);">Note: below mentioned project belongs to company that I have worked with</p>
+						<h2>Projects </h2>
+						<!-- <p style="color: rgb(181, 32, 32);">Note: below mentioned project belongs to company that I have worked with</p> -->
 					</header>
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Grants Management System</a></h3>
-								<p>It provides a dynamic form for grant seekers and a web application for the provider to verify and provide the requested grant.
-
+								<a class="image featured"><img src="images/gibl.webp" alt="" /></a>
+								<h3><a target="_blank" href="https://globalonline.gibl.com.np/">Fast Banking (Fintech)</a></h3>
+								<p>
+									Omni-channel banking app for web and mobile. Features include fund transfers, QR payments, online account opening, bill payments, and government transactions, enhancing user satisfaction
 								</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a  class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">NGM</a></h3>
-								<p>It's a web app for booking, sales, servicing, scheduling, and reporting for bike distribution companies.</p>
+								<a class="image featured"><img src="images/pic05.webp" alt="" /></a>
+								<h3><a href="https://benevity.com/products/grants" target="_blank">Grants Management System </i></a></h3>
+								<p>grant management software for streamlined corporate grant processes, featuring dynamic forms for seekers and web apps for providers to verify and allocate grants
+								</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a  class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Edufinity</a></h3>
-								<p>It's a school management system including traveling, assignments, and many more features which allow parents, students, and teachers to interface.
+								<a  class="image featured"><img src="images/ngm.webp" alt="" /></a>
+								<h3><a href="https://ngmhero.com/" target="_blank">NGM</a></h3>
+								<p>Developed a web app tailored for bike distribution companies, facilitating bike booking, sales, customer service, scheduling, and reporting, streamlining their operations and enhancing efficiency.
+								</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a  class="image featured"><img src="images/edufinity.webp" alt="" /></a>
+								<h3><a href="https://edufinity.net/" target="_blank">Edufinity</a></h3>
+								<p>Developed an intuitive education management system with student, teacher, parent, attendance, exam, routine, calendar, assignment, and e-learning modules. Streamlined interface minimizes training and enhances productivity.
 									 </p>
 							</article>
 						</div>
+					
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								<h3><a href="#">Khyatee</a></h3>
-								<p>It is a web application that provides reports on the water motor, tanks, on and off status, duration, and all other parameters.</p>
+								<a  class="image featured"><img src="images/bulk-sms.webp" alt="" /></a>
+								<h3><a href="https://himalayantechies.com/sajilosms/" target="_blank">Bulk sms</a></h3>
+								<p>Seamlessly integrates with business systems, offers device-friendly bulk SMS, efficient contact management, and competitive pricing starting from 0.325p/sms for Ncell numbers and 0.5p/sms for NTC numbers.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a  class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-								<h3><a href="#">Bulk sms</a></h3>
-								<p>System that allows to send bulk sms (sms gateway)</p>
+								<a  class="image featured">
+									<img src="images/pic06.webp" alt="" /></a>
+								<h3><a href="https://learning.cehrd.edu.np/" target="_blank">E Learning portal</a></h3>
+								<p>Its learning portal provides pdf books, audio, videos, pictures, and simulations. It Nepal first e-learning platform owned by ministry of education.<br> Worked as full-stack devloper.<br/>
+								<i>stack: 
+									Node, Vue.js
+								</i>								</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a  class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="https://learning.cehrd.edu.np/" target="_blank">Learning portal</a></h3>
-								<p>Its learning portal provides pdf books, audio, videos, pictures, and simulations.
+								<a  class="image featured"><img src="images/dumore_dashboard.webp" alt="" /></a>
+								<h3><a href="#" target="_blank">Du More Fitness</a></h3>
+								<p>Developed a fitness management system with admin capabilities for trainers, staff, and members. Enables exercise category setup, descriptions, and video access via a mobile app
 								</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a  class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="https://learning.cehrd.edu.np/" target="_blank">Du More Fitness</a></h3>
-								<p>It provides an admin to manage trainers, staff, and members and allows you to set-up a category of exercise for a workout along with a description and videos for members, which they can access from the mobile app.
-								</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a  class="image featured"><img src="images/pic06.jpg" alt="" /></a>
+								<a  class="image featured"><img src="images/imepay.webp" alt="" /></a>
 								<h3><a href="https://www.imepay.com.np/#/" target="_blank">Wallet</a></h3>
-								<p>It is a website for a wallet company.
+								<p>Nepal's top digital wallet and payment gateway. Facilitates money transfers, bill payments, and mobile purchases. Offers a network of 25,000+ touchpoints for user convenience.								</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a class="image featured"><img src="images/pic04.webp" alt="" /></a>
+								<h3><a href="https://khyatee.in/" target="_blank">Khyatee</a></h3>
+								<p>Designed a web app for agriculture reporting, offering real-time insights into water motor, tank status, on/off, and other essential parameters for effective farm management.
 								</p>
 							</article>
 						</div>
 					</div>
 					<footer>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
+						<a href="#contact" id="lm" class="button large scrolly">Get in touch with me</a>
 					</footer>
 				</div>
 			</article>
@@ -194,6 +169,30 @@
 					</header>
 					<div class="row">
 						<div class="col-12">
+							<form  action="" id="loginForm">
+								<div class="row">
+									<div class="col-6 col-12-small">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="text" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<input type="text" name="subject" id="subject" placeholder="Subject" />
+									</div>
+									<div class="col-12">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+											<li><input type="reset" value="Clear Form" class="alt" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-12">
 							<h3>Also find me on ...</h3>
 							<ul class="social">
 								<li><a href="https:fb.com/Dhirendra.Thakulla" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -202,11 +201,11 @@
 							<hr />
 						</div>
 					</div>
-					<!-- <footer>
+					<footer>
 						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href=""></a></li>
+							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
-					</footer> -->
+					</footer>
 					
 				</div>
 			</article>
@@ -219,21 +218,187 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+			<script src="./assets/sass/libs/json-formatter.js"></script>
 			<script>
+				
 				var textWrapper = document.querySelector('.ml1 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+				var textGreetingWrapper = document.querySelector('.greeting-warpper .greeting');
+				var letters = $('.letters');
+				// letters.hide();
+				
+				textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+				textGreetingWrapper.innerHTML = textGreetingWrapper.textContent.replace(/\S/g, "<span class='greeting'>$&</span>");
+		anime.timeline({loop: false})
+		.add({
+			targets: '.greeting',
+			scale: [0,1],
+			opacity: [0,1],
+			translateZ: 0,
+			easing: "easeOutExpo",
+			duration: 900,
+			delay: (el, i) => 90 * (i+1)
+		})
+		function textAnimiName(){
+			anime.timeline({loop: false})
+		.add({
+			targets: '.letter',
+			scale: [0.3,1],
+			opacity: [.3,1],
+			translateX: 0,
+			translateZ: 0,
+			easing: "easeOutExpo",
+			duration: 600,
+			delay: (el, i) => 70 * (i+1)
+		})
+		}
 
-anime.timeline({loop: false})
-  .add({
-    targets: '.letter',
-    scale: [0.3,1],
-    opacity: [0,1],
-    translateZ: 0,
-    easing: "easeOutExpo",
-    duration: 600,
-    delay: (el, i) => 70 * (i+1)
-  })
-			</script>
+		setTimeout(() => {textAnimiName()},1000)
+//
+		const techData = {
+            "languages": {
+                "JavaScript": ["node (express)","jQuery","Es6","typeStript"],
+                "PHP": "cakePHP",
+                "Java": "core Java",
+				
+            },
+            "frontend": ["Angular", "Vue", "React"],
+            "design": ["HTML5", "CSS", "SCSS", "Bootstrap", "Material design"],
+            "Database": ["MySQL", "MongoDb"],
+            "cache": "Redis",
+            "httpClient": ["Axios", "gRPC"],
+			"DeployServer":[ "Linux","mp2","jenkins","docker"],
+            "messageBroker": "RabbitMq"
+        };
+
+        // Function to display the JSON data
+        function displayTechData() {
+			var container = document.getElementById("techDataContainer");
+            var jsonData = JSON.stringify(techData, null, 2);
+			const config = {
+				hoverPreviewEnabled: true,
+				hoverPreviewArrayCount: 100,
+				hoverPreviewFieldCount: 5,
+				theme: '',
+				animateOpen: true,
+				animateClose: true,
+				useToJSON: true,
+				maxArrayItems: 100,
+				exposePath: false
+			}
+
+            var formatter = new JSONFormatter(JSON.parse(jsonData),3);
+            container.innerHTML = formatter;
+            container.appendChild(formatter.render());
+
+        }
+ 
+		displayTechData();
+		var container = document.getElementById("techDataContainer");
+		if (container) {
+		// Check if the innerHTML of the container contains the "[object Object]" string
+		if (container.innerHTML.includes("[object Object]")) {
+			// Replace the "[object Object]" string with an empty string to remove it
+			// container.innerHTML = container.innerHTML.replace("[object Object]", "[]");
+			container.innerHTML =  container.innerHTML.slice(15);
+		}
+	}
+
+	
+		function update() {
+			var TopRightButtomLeft  = function (rect, ele) {
+				//make our own space :)
+				this.top = rect.top;
+				this.left = rect.left;
+				this.width = rect.width;
+				this.height = rect.height;
+				this.right = rect.right;
+				this.bottom = rect.bottom;
+				this.ele = ele;
+			};
+
+			const cvBtn = document.getElementById("cvBtn");
+			const LearnBtn = document.getElementById("learnBtn");
+			function getDifference(a, b) {
+				if (a > b) {
+					return a - b;
+				}
+
+				return b - a;
+			}
+			const rectCv = cvBtn.getBoundingClientRect();
+			const rectLb = LearnBtn.getBoundingClientRect();
+			
+			const colliding = function (other) {
+				console.log("topcv == ",this.top ,"right cv == ",this.right,"bottom cv == ",this.bottom ,"left cv == ",this.left )
+				console.log("top l == ",other.top ,"right l == ",this.other,"bottom l == ",other.bottom ,"left l == ",other.left )
+				console.log(Math.abs(getDifference(this.bottom,other.bottom)));
+				if(Math.abs(getDifference(this.bottom,other.bottom)) > this.bottom){
+					//change to nect element for check
+
+				}
+					return !(
+					this.top > other.bottom ||
+					this.right < other.left ||
+					this.bottom < other.top ||
+					this.left > other.right
+					);
+			}
+			TopRightButtomLeft(rectCv);
+			for(const key in rectLb){
+				if(typeof rectLb[key] !=="function"){
+					var res = colliding(rectLb)
+				}
+			}
+		}
+
+		// document.addEventListener("scroll", update);
+		// update();
+
+		//send email 
+		const sendMail = async (myBody) => {
+			const response = await fetch('https://my-api-demo.netlify.app/.netlify/functions/api/send-email', {
+				method: 'POST',
+				body: myBody, 
+				headers: {
+				'Content-Type': 'application/json'
+				}
+			});
+			const myJson = await response.json(); 
+			console.log("=====>",myJson)
+		}
+ 
+
+		let loginForm = document.getElementById("loginForm");
+		loginForm.addEventListener("submit", (e) => {
+			e.preventDefault();
+
+			let email = document.getElementById("email");
+			let subject = document.getElementById("subject");
+			let contact = document.getElementById("contact");
+			let message = document.getElementById("message");
+
+			if (email.value == "" || message.value == "") {
+				alert("Ensure you input a value in email and message fields!");
+			} else {
+				let data = {
+					email: email.value,
+					subject: subject.value | "",
+					message: message.value,
+					contact: contact.value
+				}
+				sendMail(data)
+				// perform operation with form input
+				alert("This form has been successfully submitted!");
+				
+				console.log(
+				`This form has a username of ${email.value} and password of ${message.value}`
+				);
+
+				email.value = "";
+				message.value = "";
+			}
+		});
+		</script>
 
 	</body>
 </html>
