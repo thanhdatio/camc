@@ -376,10 +376,11 @@
 		loginForm.addEventListener("submit", (e) => {
 			e.preventDefault();
 
-			let email = document.getElementById("email");
-			let subject = document.getElementById("subject");
-			let contact = document.getElementById("contact");
-			let message = document.getElementById("message");
+			const email = document.getElementById("email");
+			const subject = document.getElementById("subject");
+			const contact = document.getElementById("contact");
+			const message = document.getElementById("message");
+			const name = document.getElementById("name");
 
 			if (email.value == "" || message.value == "") {
 				alert("Ensure you input a value in email and message fields!");
