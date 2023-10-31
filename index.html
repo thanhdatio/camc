@@ -378,7 +378,7 @@
 
 			const email = document.getElementById("email");
 			const subject = document.getElementById("subject");
-			const mobile = document.getElementById("mobile");
+			// const mobile = document.getElementById("mobile");
 			const message = document.getElementById("message");
 			const name = document.getElementById("name");
 
@@ -389,8 +389,8 @@
 					name: name.value,
 					email: email.value,
 					subject: subject.value,
-					message: message.value,
-					contact: mobile.value
+					message: message.value
+					// contact: mobile.value
 				}
 				sendMail(data)
 				// perform operation with form input
