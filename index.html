@@ -174,9 +174,9 @@
 									<div class="col-6 col-12-small">
 										<input type="text" name="name" id="name" placeholder="Name" />
 									</div>
-									<div class="col-12-small">
-										<input type="text" name="contact" id="contact" placeholder="Contact" />
-									</div>
+									<!-- <div class="col-12-small">
+										<input type="text" name="mobile" id="mobile" placeholder="Contact" />
+									</div> -->
 									<div class="col-6 col-12-small">
 										<input type="text" name="email" id="email" placeholder="Email" />
 									</div>
@@ -378,7 +378,7 @@
 
 			const email = document.getElementById("email");
 			const subject = document.getElementById("subject");
-			const contact = document.getElementById("contact");
+			const mobile = document.getElementById("mobile");
 			const message = document.getElementById("message");
 			const name = document.getElementById("name");
 
@@ -390,7 +390,7 @@
 					email: email.value,
 					subject: subject.value,
 					message: message.value,
-					contact: contact.value
+					contact: mobile.value
 				}
 				sendMail(data)
 				// perform operation with form input
