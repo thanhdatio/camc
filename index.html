@@ -181,6 +181,9 @@
 										<input type="text" name="subject" id="subject" placeholder="Subject" />
 									</div>
 									<div class="col-12">
+										<input type="text" name="contact" id="contact" placeholder="Contact" />
+									</div>
+									<div class="col-12">
 										<textarea name="message" id="message" placeholder="Message"></textarea>
 									</div>
 									<div class="col-12">
@@ -383,7 +386,7 @@
 			} else {
 				let data = {
 					email: email.value,
-					subject: subject.value | "",
+					subject: subject.value || "",
 					message: message.value,
 					contact: contact.value
 				}
