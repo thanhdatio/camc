@@ -358,10 +358,11 @@
 		const sendMail = async (myBody) => {
 			const response = await fetch('https://my-api-demo.netlify.app/.netlify/functions/api/send-email', {
 				method: 'POST',
-				body: myBody, 
-				headers: {
+				body: JSON.stringify(myBody), 
+					headers: {
+				'Accept': 'application/json',
 				'Content-Type': 'application/json'
-				}
+				},
 			});
 			const myJson = await response.json(); 
 			console.log("=====>",myJson)
