@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Dhirendra thakulla</title>
@@ -67,7 +62,7 @@
 
 					</header>
 					<footer>
-						<a href="#portfolio" class="button large scrolly">See some of my work</a>
+						<a href="#portfolio" class="button large scrolly"  id="project">See some of my work</a>
 					</footer>
 				</div>
 			</article>
@@ -157,7 +152,7 @@
 						</div>
 					</div>
 					<footer>
-						<a href="#contact" id="lm" class="button large scrolly">Get in touch with me</a>
+						<a href="#contact" id="contact" class="button large scrolly">Get in touch with me</a>
 					</footer>
 				</div>
 			</article>
@@ -225,6 +220,7 @@
 			<script src="assets/js/main.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 			<script src="./assets/sass/libs/json-formatter.js"></script>
+
 			<script>
 				
 				var textWrapper = document.querySelector('.ml1 .letters');
@@ -304,62 +300,10 @@
 		// Check if the innerHTML of the container contains the "[object Object]" string
 		if (container.innerHTML.includes("[object Object]")) {
 			// Replace the "[object Object]" string with an empty string to remove it
-			// container.innerHTML = container.innerHTML.replace("[object Object]", "[]");
 			container.innerHTML =  container.innerHTML.slice(15);
 		}
 	}
-
-	
-		function update() {
-			var TopRightButtomLeft  = function (rect, ele) {
-				//make our own space :)
-				this.top = rect.top;
-				this.left = rect.left;
-				this.width = rect.width;
-				this.height = rect.height;
-				this.right = rect.right;
-				this.bottom = rect.bottom;
-				this.ele = ele;
-			};
-
-			const cvBtn = document.getElementById("cvBtn");
-			const LearnBtn = document.getElementById("learnBtn");
-			function getDifference(a, b) {
-				if (a > b) {
-					return a - b;
-				}
-
-				return b - a;
-			}
-			const rectCv = cvBtn.getBoundingClientRect();
-			const rectLb = LearnBtn.getBoundingClientRect();
-			
-			const colliding = function (other) {
-				console.log("topcv == ",this.top ,"right cv == ",this.right,"bottom cv == ",this.bottom ,"left cv == ",this.left )
-				console.log("top l == ",other.top ,"right l == ",this.other,"bottom l == ",other.bottom ,"left l == ",other.left )
-				console.log(Math.abs(getDifference(this.bottom,other.bottom)));
-				if(Math.abs(getDifference(this.bottom,other.bottom)) > this.bottom){
-					//change to nect element for check
-
-				}
-					return !(
-					this.top > other.bottom ||
-					this.right < other.left ||
-					this.bottom < other.top ||
-					this.left > other.right
-					);
-			}
-			TopRightButtomLeft(rectCv);
-			for(const key in rectLb){
-				if(typeof rectLb[key] !=="function"){
-					var res = colliding(rectLb)
-				}
-			}
-		}
-
-		// document.addEventListener("scroll", update);
-		// update();
-
+		document.addEventListener("scroll", update);
 		//send email 
 		const sendMail = async (myBody) => {
 			const response = await fetch('https://my-api-demo.netlify.app/.netlify/functions/api/send-email', {
@@ -371,7 +315,6 @@
 				},
 			});
 			const myJson = await response.json(); 
-			console.log("=====>",myJson)
 		}
  
 
