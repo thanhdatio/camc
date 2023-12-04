@@ -303,7 +303,6 @@
 			container.innerHTML =  container.innerHTML.slice(15);
 		}
 	}
-		document.addEventListener("scroll", update);
 		//send email 
 		const sendMail = async (myBody) => {
 			const response = await fetch('https://my-api-demo.netlify.app/.netlify/functions/api/send-email', {
